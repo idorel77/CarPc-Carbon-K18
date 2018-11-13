@@ -93,6 +93,7 @@
 				<posy>0</posy>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
+				<label>Yes</label>
 			</control>
 			<control type="button" id="10">
 				<description>No button</description>
@@ -100,6 +101,7 @@
 				<posy>0</posy>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
+				<label>No</label>
 			</control>
 		</control>
 	</controls>
