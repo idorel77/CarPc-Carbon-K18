@@ -926,7 +926,7 @@
 				<posy>4</posy>
 				<width>100</width>
 				<height>70</height>
-				<label>157</label>
+				<label></label>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_previous.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_previous.png</texturenofocus>
@@ -941,8 +941,8 @@
 				<posy>4</posy>
 				<width>100</width>
 				<height>70</height>
-				<label>31351</label>
-				<altlabel>208</altlabel>
+				<label></label>
+				<altlabel></altlabel>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_pause.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_pause.png</texturenofocus>
@@ -960,7 +960,7 @@
 				<posy>4</posy>
 				<width>100</width>
 				<height>70</height>
-				<label>31352</label>
+				<label></label>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_stop.png</texturenofocus>
@@ -975,7 +975,7 @@
 				<posy>4</posy>
 				<width>100</width>
 				<height>70</height>
-				<label>209</label>
+				<label></label>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_next.png</texturenofocus>
