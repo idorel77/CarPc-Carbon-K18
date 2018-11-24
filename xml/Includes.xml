@@ -111,7 +111,7 @@
                 </control>
                 <control type="label">
                     <description>Temp Label</description>
-                    <height>22</height>
+                    <height>25</height>
                     <width max="400">auto</width>
                     <label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
                     <aligny>center</aligny>
@@ -121,7 +121,7 @@
                 <control type="label">
                     <description>Temp Units Label</description>
                     <posy>2</posy>
-                    <height>15</height>
+                    <height>25</height>
                     <width max="200">auto</width>
                     <label>$INFO[System.TemperatureUnits]</label>
                     <font>font20</font>
