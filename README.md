@@ -2,7 +2,7 @@
 
 If you find some problems you can write me.
 
-The skin in action https://youtu.be/0peOkS6z_aU (this is on kodi 17)
+The skin in action https://youtu.be/0peOkS6z_aU 
 
 If you like this skin you can by me a bear [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AMXESTYHM96HN)
 
