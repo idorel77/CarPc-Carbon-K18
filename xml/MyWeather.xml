@@ -298,7 +298,7 @@
 							<posx>140</posx>
 							<posy>70</posy>
 							<width>240</width>
-							<height>30</height>
+							<height>34</height>
 							<font>font22</font>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
@@ -310,13 +310,13 @@
 							<posx>260</posx>
 							<posy>70</posy>
 							<width>240</width>
-							<height>30</height>
+							<height>34</height>
 							<font>font22</font>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>[COLOR=grey]$LOCALIZE[418][/COLOR][CR][B]$INFO[ListItem.Property(LowTemp)][/B]$INFO[ListItem.Property(TempUnits)]</label>
-							<visible>!String.IsEmpty(ListItem.Property(HighTemp))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(LowTemp))</visible>
 						</control>
 						<control type="textbox">
 							<posx>40</posx>
@@ -359,7 +359,7 @@
 							<posx>140</posx>
 							<posy>70</posy>
 							<width>240</width>
-							<height>30</height>
+							<height>34</height>
 							<font>font22</font>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
@@ -371,13 +371,13 @@
 							<posx>260</posx>
 							<posy>70</posy>
 							<width>240</width>
-							<height>30</height>
+							<height>34</height>
 							<font>font22</font>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>[COLOR=grey]$LOCALIZE[418][/COLOR][CR][B]$INFO[ListItem.Property(LowTemp)][/B]$INFO[ListItem.Property(TempUnits)]</label>
-							<visible>!String.IsEmpty(ListItem.Property(HighTemp))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(LowTemp))</visible>
 						</control>
 						<control type="textbox">
 							<posx>40</posx>
