@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.CarPc-Carbon" version="2.0.6" name="CarPc-Carbon" provider-name="Team Kodi-idorel77">
+<addon id="skin.CarPc-Carbon" version="2.0.7" name="CarPc-Carbon" provider-name="idorel77">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 	</requires>
