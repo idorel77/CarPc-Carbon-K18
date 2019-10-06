@@ -186,46 +186,25 @@
 			<onclick>Skin.ToggleSetting(HideDayNight)</onclick>
 			<selected>Skin.HasSetting(HideDayNight)</selected>
 		</control>
-		<control type="group" id="4272">
-		<posx>220</posx>
-		<posy>105r</posy>
-		<control type="button" id="4273">
-		<description>Fullscreen</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>100</height>
-				<texturenofocus border="6"></texturenofocus>
-                <texturefocus >list_focus.png</texturefocus>
-				<onclick condition="Player.HasAudio">ActivateWindow(MusicOSD)</onclick>
-				<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
-			</control>
-			<control type="image">
-				<posx>100</posx>
-				<posy>15</posy>
-				<width>1</width>
-				<height>80</height>
-				<texture >linie_albastra_v.png</texture>
-			</control>
-			<control type="image">
-                <description>Fullscreen</description>
-                <posx>5</posx>
-                <posy>15</posy>
-                <width>90</width>
-                <height>80</height>
-                <texture colordiffuse="icons">fullscreen.png</texture>
-                <bordersize>12</bordersize>
-            </control>
-		</control>			
- 		<control type="panel" id="9002">
 		
+	<include>DayNight</include>
+	
+		<control type="group" id="9030">
+				<include>VolumeBottom</include>
+				<include>FullscreenButton</include>
+				<include>PlayerControlsAll</include>
+		</control>	
+		
+ 		<control type="panel" id="9002">			
 			<include>VisibleFadeEffect</include>
 			<include>BottomMenuLayout</include>
+			<onup>Control.SetFocus(4271)</onup>
+				<onright>Control.SetFocus(9040)</onright>
 			<content>
 				<item>
-					<label>13376</label>
+					<label>13376</label>		
 					<onclick>ActivateWindow(FileManager)</onclick>
-					<icon >icon_button_filemanager.png</icon>
+					<icon >icon_button_filemanager.png</icon>				  
 					<visible>!Skin.HasSetting(HideHomeButtonFileManager)</visible>
 				</item>
 				<item>
@@ -241,8 +220,7 @@
 				</item>
 			</content>
 		</control>
-		<include>VolumeBottom</include>
-		<include>PlayerControlsAll</include>
-		<include>DayNight</include>
+
+		
 	</controls>	
 </window>

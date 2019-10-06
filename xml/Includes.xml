@@ -149,8 +149,8 @@
 			<posx>20</posx>
 			<posy>185</posy>
 			<control type="button" id="4201">
-			<ondown>Control.SetFocus(4211)</ondown>
-                <onup>Control.SetFocus(600)</onup>
+			<ondown>Control.SetFocus(4221)</ondown>
+                <onup>Control.SetFocus()</onup>
         		<onleft>Control.SetFocus()</onleft>
 				<onright>Control.SetFocus(4251)</onright>
 				<posx>0</posx>
@@ -173,8 +173,8 @@
 			<posy>370</posy>
 			<control type="button" id="4221">
 				<onup>Control.SetFocus(4201)</onup>
-                <ondown>Control.SetFocus(4221)</ondown>
                 <onright>Control.SetFocus(4261)</onright>
+				<ondown>Control.SetFocus(4241)</ondown>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>545</width>
@@ -189,14 +189,14 @@
 		</control>
 	</include>
 	<include name="Radio">
-	  <control type="group" id="4240">
+	  <control type="group" id="4240">  
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
 			<posy>551</posy>
 			<control type="button" id="4241">
-            <onup>Control.SetFocus(4211)</onup>
-            <ondown>Control.SetFocus(4251)</ondown>
-            <onright>Control.SetFocus(4271)</onright>
+				<onup>Control.SetFocus(4221)</onup>
+				<ondown>Control.SetFocus(9030)</ondown>
+				<onright>Control.SetFocus(4271)</onright>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>725</width>
@@ -374,7 +374,7 @@
 			<control type="button" id="4261">
 				<onup>Control.SetFocus(4251)</onup>
                 <ondown>Control.SetFocus(4271)</ondown>
-                <onleft>Control.SetFocus(4211)</onleft>
+                <onleft>Control.SetFocus(4221)</onleft>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>545</width>
@@ -398,7 +398,7 @@
 			<include>VisibleFadeEffect</include>
 			<control type="button" id="4271">
 				<onup>Control.SetFocus(4261)</onup>
-                <ondown>Control.SetFocus(4281)</ondown>
+                <ondown>Control.SetFocus(9002)</ondown>
                 <onleft>Control.SetFocus(4241)</onleft>
 				<description>Shutdown Button</description>
 				<posx>0</posx>
@@ -773,11 +773,9 @@
             <posx>0</posx>
             <posy>105r</posy>
             <control type="button" id="5572">
-                <ondown>Control.SetFocus()</ondown>
-                <onup>Control.SetFocus()</onup>
-                <onleft>Control.SetFocus()</onleft>
-                <onright>Control.SetFocus()</onright>
                 <description>KB_minus</description>
+				<onup>Control.SetFocus(4241)</onup>
+				<onright>Control.SetFocus(5571)</onright>
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>110</width>
@@ -804,11 +802,10 @@
                 <bordersize>12</bordersize>
             </control>
             <control type="button" id="5571">
-                <ondown>Control.SetFocus()</ondown>
-                <onup>Control.SetFocus()</onup>
-                <onleft>Control.SetFocus()</onleft>
-                <onright>Control.SetFocus()</onright>
                 <description>Volum Up</description>
+				<onup>Control.SetFocus(4241)</onup>
+				<onleft>Control.SetFocus(5572)</onleft>
+				<onright>Control.SetFocus(4273)</onright>
                 <posx>110</posx>
                 <posy>0</posy>
                 <width>110</width>
@@ -836,7 +833,43 @@
             </control>
         </control>
     </include>
-    <include name="DayNight">
+	<include name="FullscreenButton">
+		<control type="group" id="4272">
+		<posx>220</posx>
+		<posy>105r</posy>
+		<control type="button" id="4273">
+		<description>Fullscreen</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>		
+				<onup>Control.SetFocus(4241)</onup>
+				<onright>Control.SetFocus(600)</onright>
+				<onleft>Control.SetFocus(5571)</onleft>
+				<texturenofocus border="6"></texturenofocus>
+                <texturefocus >list_focus.png</texturefocus>
+				<onclick condition="Player.HasAudio">ActivateWindow(MusicOSD)</onclick>
+				<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
+			</control>
+			<control type="image">
+				<posx>100</posx>
+				<posy>15</posy>
+				<width>1</width>
+				<height>80</height>
+				<texture >linie_albastra_v.png</texture>
+			</control>
+			<control type="image">
+                <description>Fullscreen</description>
+                <posx>5</posx>
+                <posy>15</posy>
+                <width>90</width>
+                <height>80</height>
+                <texture colordiffuse="icons">fullscreen.png</texture>
+                <bordersize>12</bordersize>
+            </control>
+		</control>			
+	</include>
+	<include name="DayNight">
 		<control type="image">
 		<visible>!Skin.HasSetting(HideDayNight)</visible>
 			<posx>-1706</posx>
@@ -915,8 +948,12 @@
         </control>
 	</include>
 	<include name="PlayerControlsAll">
-		<control type="group" id="100">
+		<control type="group" id="9040">
 		<include>Window_OpenClose_Animation_Slide_Up</include>
+				<onleft>Control.SetFocus(4273)</onleft>
+                <onright>Control.SetFocus(9002)</onright>
+                <onup>Control.SetFocus()</onup>
+        		<ondown>Control.SetFocus()</ondown>
 			<!--<visible>Player.HasAudio | Player.HasVideo</visible>-->
 			<posx>430</posx>
 			<posy>90r</posy>
@@ -930,10 +967,10 @@
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_previous.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_previous.png</texturenofocus>
-				<onleft></onleft>
+				<onleft>Control.SetFocus(4273)</onleft>
                 <onright>Control.SetFocus(602)</onright>
-                <onup>Control.SetFocus(602)</onup>
-        		<ondown>Control.SetFocus(4201)</ondown>
+                <onup>Control.SetFocus()</onup>
+        		<ondown>Control.SetFocus()</ondown>
                 <onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="togglebutton" id="602">
@@ -951,8 +988,8 @@
 				<alttexturenofocus colordiffuse="icons">osd_play.png</alttexturenofocus>
 				<onleft>Control.SetFocus(600)</onleft>
                 <onright>Control.SetFocus(603)</onright>
-                <onup>Control.SetFocus(603)</onup>
-                <ondown>Control.SetFocus(600)</ondown>
+                <onup>Control.SetFocus()</onup>
+                <ondown>Control.SetFocus()</ondown>
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="603">
@@ -966,8 +1003,8 @@
 				<texturenofocus colordiffuse="icons">osd_stop.png</texturenofocus>
 				<onleft>Control.SetFocus(602)</onleft>
                 <onright>Control.SetFocus(605)</onright>
-                <onup>Control.SetFocus(605)</onup>
-                <ondown>Control.SetFocus(602)</ondown>
+                <onup>Control.SetFocus()</onup>
+                <ondown>Control.SetFocus()</ondown>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="605">
@@ -980,9 +1017,9 @@
 				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_next.png</texturenofocus>
 				<onleft>Control.SetFocus(603)</onleft>
-                <onright>Control.SetFocus(4298)</onright>
-                <onup>Control.SetFocus(4298)</onup>
-                <ondown>Control.SetFocus(603)</ondown>
+                <onright>Control.SetFocus(9002)</onright>
+                <onup>Control.SetFocus()</onup>
+                <ondown>Control.SetFocus()</ondown>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 		</control>
@@ -1467,7 +1504,7 @@
 		<posy>110r</posy>
 		<width>802</width>
 		<height>120</height>
-		<onleft>9002</onleft>
+		<onleft>9040</onleft>
 		<onright>9002</onright>
 		<onup>9001</onup>
 		<ondown>20</ondown>
@@ -2144,6 +2181,7 @@
 			<onclick>ActivateWindow(musicplaylist)</onclick>
 			<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
 		</control>
+		
 	</include>
 	<include name="MusicOSDMenu">
 		<control type="button">
@@ -2954,161 +2992,7 @@
 		</control>
 		</control>
 		</include>
-	<!--<include name="SettingsPanel">
-		<control type="panel" id="9000">
-			<include>Window_OpenClose_Animation_Zoom</include>
-			<posx>$PARAM[panel-posx]</posx>
-			<posy>100</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>750</height>
-			<onleft>9000</onleft>
-			<onright>9001</onright>
-			<onup>9000</onup>
-			<ondown>9000</ondown>
-			<scrolltime>300</scrolltime>
-			<itemlayout height="250" width="$PARAM[layout-width]">
-				<control type="image">
-					<posx>20</posx>
-					<posy>20</posy>
-					<width>360</width>
-					<height>210</height>
-					<texture>special://skin/media/square2.png</texture>
-				</control>
-				<control type="image">
-					<posx>17</posx>
-					<posy>173</posy>
-					<width>366</width>
-					<height>60</height>
-					<texture colordiffuse="40000000">black.png</texture>
-					<bordertexture border="6">panel_shadow.png</bordertexture>
-					<bordersize>5</bordersize>
-				</control>
-				<control type="image">
-					<posx>80</posx>
-					<posy>10</posy>
-					<width>240</width>
-					<height>240</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>190</posy>
-					<width>400</width>
-					<height>400</height>
-					<label>$INFO[ListItem.Label]</label>
-					<font>font20_title</font>
-					<align>center</align>
-					<textcolor>white</textcolor>
-				</control>
-			</itemlayout>
-			<focusedlayout height="250" width="$PARAM[layout-width]">
-				<control type="group">
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
-					</animation>
-					<animation type="UnFocus" reversible="false">
-						<effect type="zoom" center="auto" start="108" end="100" time="250" tween="sine" />
-					</animation>
-					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>360</width>
-						<height>210</height>
-						<texture>special://skin/media/square2.png</texture>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>360</width>
-						<height>210</height>
-						<texture>list_focus.png</texture>
-						<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>180</posy>
-						<width>360</width>
-						<height>50</height>
-						<texture colordiffuse="40000000">black.png</texture>
-					</control>
-					<control type="image">
-						<posx>80</posx>
-						<posy>10</posy>
-						<width>240</width>
-						<height>240</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>190</posy>
-						<width>400</width>
-						<height>400</height>
-						<label>$INFO[ListItem.Label]</label>
-						<font>font20_title</font>
-						<align>center</align>
-					</control>
-				</control>
-			</focusedlayout>
-			<content>
-				<item id="1">
-					<label>14200</label>
-					<label2>31408</label2>
-					<onclick>ActivateWindow(PlayerSettings)</onclick>
-					<icon>icon_settings_player.png</icon>
-				</item>
-				<item id="2">
-					<label>14211</label>
-					<label2>31409</label2>
-					<onclick>ActivateWindow(MediaSettings)</onclick>
-					<icon>icon_settings_media.png</icon>
-				</item>
-				<item id="3">
-					<label>31556</label>
-					<label2>31555</label2>
-					<onclick>ActivateWindow(PVRSettings)</onclick>
-					<icon>icon_settings_livetv.png</icon>
-				</item>
-				<item id="4">
-					<label>14036</label>
-					<label2>31405</label2>
-					<onclick>ActivateWindow(ServiceSettings)</onclick>
-					<icon>icon_settings_services.png</icon>
-				</item>
-				<item id="5">
-					<label>14206</label>
-					<label2>31410</label2>
-					<onclick>ActivateWindow(InterfaceSettings)</onclick>
-					<icon>icon_settings_interface.png</icon>
-				</item>
-				<item id="6">
-					<label>13000</label>
-					<label2>31406</label2>
-					<onclick>ActivateWindow(SystemSettings)</onclick>
-					<icon>icon_settings_system.png</icon>
-				</item>
-				<item id="7">
-					<label>24001</label>
-					<label2>31407</label2>
-					<onclick>ActivateWindow(AddonBrowser)</onclick>
-					<icon>icon_settings_addons.png</icon>
-				</item>
-				<item id="8">
-					<label>13200</label>
-					<label2>31411</label2>
-					<onclick>ActivateWindow(Profiles)</onclick>
-					<icon>icon_settings_profiles.png</icon>
-				</item>
-				<item id="9">
-					<label>130</label>
-					<label2>31412</label2>
-					<onclick>ActivateWindow(SystemInfo)</onclick>
-					<icon>icon_settings_systeminfo.png</icon>
-				</item>
-			</content>
-		</control>
-	</include>-->
+
 	<include name="SkinSettingsContent">
 		<control type="grouplist" id="100">
 			<description>control area</description>

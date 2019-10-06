@@ -23,12 +23,12 @@
 				<height>720</height>
 				<itemgap>-1</itemgap>
 				<onleft>9</onleft>
-				<onright>9</onright>
 				<onup>2</onup>
 				<ondown>2</ondown>
 				<control type="button" id="91">
 					<width>390</width>
 					<height>80</height>
+					<onright>100</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
@@ -42,6 +42,7 @@
 				<control type="button" id="95">
 					<width>390</width>
 					<height>80</height>
+					<onright>500</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
@@ -52,9 +53,10 @@
 					<textoffsetx>20</textoffsetx>
 					<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
 				</control>
-				<control type="button" id="95">
+				<control type="button" id="98">
 					<width>390</width>
 					<height>80</height>
+					<onright>600</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
@@ -69,6 +71,7 @@
 					<description>Addon Button</description>
 					<width>390</width>
 					<height>80</height>
+					<onright>200</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
@@ -83,6 +86,7 @@
 					<description>Background Button</description>
 					<width>390</width>
 					<height>80</height>
+					<onright>300</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
@@ -97,6 +101,7 @@
 					<description>Logo Button</description>
 					<width>390</width>
 					<height>80</height>
+					<onright>400</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
@@ -110,6 +115,7 @@
 				<control type="button" id="96">
 					<width>390</width>
 					<height>80</height>
+					<onright>700</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
@@ -123,6 +129,7 @@
 				<control type="button" id="97">
 					<width>390</width>
 					<height>80</height>
+					<onright>800</onright>
 					<aligny>center</aligny>
 					<font>font24_title</font>
 					<textcolor>white</textcolor>
