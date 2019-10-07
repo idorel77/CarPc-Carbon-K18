@@ -1,4 +1,5 @@
 <window id="0">
+		<defaultcontrol>4250</defaultcontrol>	
 	<controls>
 		<control type="videowindow">
 			<posx>0</posx>
