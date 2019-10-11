@@ -77,7 +77,7 @@
                 <height>90</height>
                 <align>right</align>
                 <aspectratio>keep</aspectratio>
-                <texture background="true">$INFO[Weather.Conditions]</texture>
+                <texture background="true">$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
             </control>
             <control type="label">
                 <description>location label</description>
